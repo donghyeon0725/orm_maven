@@ -15,6 +15,7 @@ public class Run {
         Run.jpql2();
     }
 
+    // jpa 는 트랜잭션 없이 동작하지 않는다.
     public static void run1() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hello");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -28,6 +29,7 @@ public class Run {
         entityManagerFactory.close();
     }
 
+    // jpa 는 트랜잭션이 있어야 동작한다.
     public static void run2() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hello");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -47,6 +49,7 @@ public class Run {
         entityManagerFactory.close();
     }
 
+    // 정석적인 코드
     public static void run3() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hello");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -71,6 +74,7 @@ public class Run {
         entityManagerFactory.close();
     }
 
+    // jpql 예제 코드
     public static void jpql1() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hello");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

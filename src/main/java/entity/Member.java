@@ -26,4 +26,12 @@ public class Member {
         this.name = name;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
