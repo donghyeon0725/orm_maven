@@ -7,8 +7,8 @@
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
-            <property name="javax.persistence.jdbc.password" value="1234"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/db"/>
             <!-- jpa 중, 하이버네이트를 사용하기 때문에 아래 설정들은 hibernate으로 시작 합니다. -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 
@@ -19,7 +19,6 @@
             <property name="hibernate.format_sql" value="true"/>
             <!-- 쿼리가 나온 이유를 주석 형태로 띄워 줍니다. -->
             <property name="hibernate.use_sql_comments" value="true"/>
-            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
         </properties>
     </persistence-unit>
 </persistence>
